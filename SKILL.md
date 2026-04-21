@@ -291,6 +291,48 @@ yt-dlp --version
 
 **Note**: `ffmpeg` is needed for both Whisper audio extraction and video frame capture for visual summaries. DALL-E fallback image generation requires `OPENAI_API_KEY`.
 
+## Optional Pixelle-Video Installation
+
+`Pixelle-Video` is optional. It is not bundled inside this skill directory and will not be installed automatically when someone copies or installs `video-transcript`.
+
+You only need `Pixelle-Video` if you plan to run:
+
+```bash
+python3 "<skill-path>/scripts/pixelle_end_to_end.py" ...
+```
+
+Recommended local layout:
+
+```text
+workspace/
+├── video-transcript/
+└── Pixelle-Video/
+```
+
+Suggested setup steps:
+
+```bash
+# 1. Create a workspace directory
+mkdir -p workspace
+cd workspace
+
+# 2. Place this skill repo in your workspace
+git clone https://github.com/ylouis83/video_transcript.git
+
+# 3. Clone or copy Pixelle-Video beside it
+#    Replace this with the actual Pixelle-Video source you use
+git clone <pixelle-video-repo> Pixelle-Video
+
+# 4. Install Pixelle-Video with its own setup instructions
+cd Pixelle-Video
+# ...follow Pixelle-Video installation steps...
+```
+
+Default behavior:
+- `pixelle_end_to_end.py` looks for a sibling folder named `Pixelle-Video`
+- If Pixelle lives elsewhere, pass `--pixelle-repo /absolute/path/to/Pixelle-Video`
+- If you do not need video rendering, ignore Pixelle and use the transcript / Markdown / docx pipeline directly
+
 ## Error Handling
 
 | Scenario | Action |

@@ -116,6 +116,52 @@ Notes:
 - `openai` is needed for Whisper API usage and image-generation fallback.
 - Keep credentials out of the repository. Use environment variables only.
 
+## Optional Pixelle setup
+
+`Pixelle-Video` is not bundled with this repository and is not installed automatically when someone clones this repo or installs the skill.
+
+If you only need transcript extraction, section splitting, Markdown export, or `.docx` export, you can ignore Pixelle entirely.
+
+If you want to run [`scripts/pixelle_end_to_end.py`](./scripts/pixelle_end_to_end.py), prepare `Pixelle-Video` separately:
+
+```text
+# Example workspace layout
+workspace/
+├── video-transcript/
+└── Pixelle-Video/
+```
+
+Recommended setup steps:
+
+```bash
+# 1. Create a workspace directory
+mkdir -p workspace
+cd workspace
+
+# 2. Clone this repository
+git clone https://github.com/ylouis83/video_transcript.git
+
+# 3. Clone or place Pixelle-Video beside it
+#    Replace this with your actual Pixelle-Video source
+git clone <pixelle-video-repo> Pixelle-Video
+
+# 4. Install Pixelle-Video using its own README / setup instructions
+cd Pixelle-Video
+# ...install Pixelle-Video dependencies here...
+```
+
+By default, `scripts/pixelle_end_to_end.py` looks for a sibling directory named `Pixelle-Video`.
+
+If your Pixelle checkout lives somewhere else, pass it explicitly:
+
+```bash
+python3 scripts/pixelle_end_to_end.py \
+  "https://www.youtube.com/watch?v=VIDEO_ID" \
+  --output-dir ./output/pixelle_demo \
+  --story-mode newsroom \
+  --pixelle-repo /absolute/path/to/Pixelle-Video
+```
+
 ## Quick start
 
 Extract a transcript bundle:
@@ -179,6 +225,7 @@ python3 -m pip install pytest
 - Do not commit API keys, tokens, or generated deliverables.
 - Keep local virtual environments and caches ignored.
 - `OPENAI_API_KEY` should be provided via the shell environment, not hardcoded.
+- `Pixelle-Video` should be installed separately and kept out of this repository unless you intentionally choose a monorepo layout.
 - Public uploads should include only source files, references, tests, and docs.
 
 ## License
