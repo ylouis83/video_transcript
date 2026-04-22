@@ -2,7 +2,7 @@
 
 `video-transcript` turns public video URLs into structured transcript bundles, bilingual lecture notes, visual summaries, and optional short-form newsroom-style video assets.
 
-**Demo video:** [`examples/skhynix_warroom_v5_en_shorts.mp4`](./examples/skhynix_warroom_v5_en_shorts.mp4)
+**Demo video:** [Play preview](https://raw.githubusercontent.com/ylouis83/video_transcript/main/examples/skhynix_warroom_v5_en_shorts_preview.mp4) · [Source file](./examples/skhynix_warroom_v5_en_shorts.mp4)
 
 It is built around a simple priority order:
 
@@ -40,6 +40,7 @@ Anything supported by `yt-dlp`, including common workflows for:
 ```text
 .
 ├── examples/
+│   ├── skhynix_warroom_v5_en_shorts_preview.mp4
 │   └── skhynix_warroom_v5_en_shorts.mp4
 ├── README.md
 ├── SKILL.md
@@ -196,6 +197,12 @@ python3 scripts/pixelle_end_to_end.py \
 ```
 
 If `Pixelle-Video` lives beside this repository, the default path works automatically. Otherwise pass `--pixelle-repo /path/to/Pixelle-Video`.
+
+Direct demo links:
+
+- [Play preview in browser](https://raw.githubusercontent.com/ylouis83/video_transcript/main/examples/skhynix_warroom_v5_en_shorts_preview.mp4)
+- [`examples/skhynix_warroom_v5_en_shorts_preview.mp4`](./examples/skhynix_warroom_v5_en_shorts_preview.mp4)
+- [`examples/skhynix_warroom_v5_en_shorts.mp4`](./examples/skhynix_warroom_v5_en_shorts.mp4)
 
 ## Output conventions
 
