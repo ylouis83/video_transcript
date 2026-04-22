@@ -37,6 +37,8 @@ Anything supported by `yt-dlp`, including common workflows for:
 
 ```text
 .
+├── examples/
+│   └── skhynix_warroom_v5_en_shorts.mp4
 ├── README.md
 ├── SKILL.md
 ├── references/
@@ -192,6 +194,12 @@ python3 scripts/pixelle_end_to_end.py \
 ```
 
 If `Pixelle-Video` lives beside this repository, the default path works automatically. Otherwise pass `--pixelle-repo /path/to/Pixelle-Video`.
+
+## Demo
+
+A rendered English demo video is included here:
+
+- [`examples/skhynix_warroom_v5_en_shorts.mp4`](./examples/skhynix_warroom_v5_en_shorts.mp4)
 
 ## Output conventions
 
