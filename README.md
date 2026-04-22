@@ -2,7 +2,11 @@
 
 `video-transcript` turns public video URLs into structured transcript bundles, bilingual lecture notes, visual summaries, and optional short-form newsroom-style video assets.
 
-**Demo video:** [Open playable demo page](https://rawcdn.githack.com/ylouis83/video_transcript/main/examples/demo_player.html) · [Preview MP4](https://raw.githubusercontent.com/ylouis83/video_transcript/main/examples/skhynix_warroom_v5_en_shorts_preview.mp4) · [Source file](./examples/skhynix_warroom_v5_en_shorts.mp4)
+## Demo
+
+https://github.com/user-attachments/assets/4c5d2466-fa59-453c-adc0-61a7559fa6ad
+
+Source files: [`examples/skhynix_warroom_v5_en_shorts.mp4`](./examples/skhynix_warroom_v5_en_shorts.mp4) · [`examples/skhynix_warroom_v5_en_shorts_preview.mp4`](./examples/skhynix_warroom_v5_en_shorts_preview.mp4)
 
 It is built around a simple priority order:
 
@@ -199,10 +203,8 @@ python3 scripts/pixelle_end_to_end.py \
 
 If `Pixelle-Video` lives beside this repository, the default path works automatically. Otherwise pass `--pixelle-repo /path/to/Pixelle-Video`.
 
-Direct demo links:
+Direct demo files:
 
-- [Open playable demo page](https://rawcdn.githack.com/ylouis83/video_transcript/main/examples/demo_player.html)
-- [Play preview in browser](https://raw.githubusercontent.com/ylouis83/video_transcript/main/examples/skhynix_warroom_v5_en_shorts_preview.mp4)
 - [`examples/demo_player.html`](./examples/demo_player.html)
 - [`examples/skhynix_warroom_v5_en_shorts_preview.mp4`](./examples/skhynix_warroom_v5_en_shorts_preview.mp4)
 - [`examples/skhynix_warroom_v5_en_shorts.mp4`](./examples/skhynix_warroom_v5_en_shorts.mp4)
